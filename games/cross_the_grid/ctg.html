@@ -1,0 +1,30 @@
+<!-- Created by Krishna Teja Yeluripati-->
+
+<!DOCTYPE html>
+<html>
+    <head><title>Cross the Grid!</title></head>
+    <body>
+        <select id="mygrid">
+            <option value="5">5x5</option>
+            <option value="6">6x6</option>
+            <option value="7">7x7</option>
+            <option value="8">8x8</option
+value="9">9*9</option>         
+        </select>
+        <div id="status">
+            <div id="lives"></div>
+            <div id="score"></div>
+        </div>
+        <br><table id="grid">
+            
+        </table><br>
+        <button id="startGame" onclick="newGame()">CROSS THE GRID!</button>
+        <div id="controls">
+            <button id="up" onclick="up()"><b>&uarr;</b></button>
+            <br>
+            <button id="left" onclick="left()"><b>&larr;</b></button>
+            <button id="down" onclick="down()"><b>&darr;</b></button>
+            <button id="right" onclick="right()"><b>&rarr;</b></button>
+        </div>
+    </body>
+</html>
