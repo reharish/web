@@ -1,0 +1,74 @@
+/* Created by Krishna Teja Yeluripati */
+
+body {
+    color : black;
+    background-color : rgb(225, 150, 125);
+}
+
+#mygrid {
+    width : 100%;
+    padding : 6px;
+    color : white;
+    background-color : black;
+}
+
+#status {
+    padding : 5px;
+    display : none;
+    border : 3px solid black;
+}
+
+#lives, #score {
+    width : 45%;
+    text-align : center;
+    display : inline-block;
+}
+
+table, td {
+    border : 2px solid black;
+}
+
+table {
+    width : 100%;
+    table-layout : fixed;
+    border-collapse : collapse;
+}
+
+td {
+    height : 30px;
+    text-align : center;
+    vertical-align : middle;
+}
+
+#startGame {
+    width : 100%;
+    padding : 7px;
+    color : white;
+    border : none;
+    border-radius : 9px;
+    background-color : black;
+}
+
+#controls {
+    padding : 5px;
+    display : none;
+    text-align : center;
+    border : 3px solid black;
+}
+
+#up, #down {
+    width : 27px;
+}
+
+#up, #down, #left, #right {
+    margin : 2px;
+    padding : 2px;
+    color : black;
+    font-size : 23px;
+    border : 3px solid rgb(220, 140, 130);
+    background-color : rgb(225, 150, 125);
+}
+
+button:focus, button:active {
+    outline : none;
+}
