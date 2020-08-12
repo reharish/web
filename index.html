@@ -24,6 +24,40 @@
     height: 200px;
     background: #aaa;
   }
+  .button {
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
   </style>
 </head>
 <body>
@@ -59,9 +93,9 @@
       <h2>About Me</h2>
       <h5>Harishbabu Rengaraj</h5>
      
-      <p>I'm the one of who loves to learn everything</p>
-      <h3>Some Links</h3>
-      <p>social availability</p>
+      <p>I'm the one who loves to learn everything</p>
+      
+      <h4>References</h5>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="https://www.instagram.com/_white_dot_/">Instagram</a>
@@ -70,7 +104,7 @@
           <a class="nav-link" href="https://github.com/reharish">Git</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.sololearn.com/Profile/12834697/">Sololearn</a>
+          <a class="nav-link active" href="https://www.sololearn.com/Profile/12834697/">Sololearn</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://www.google.com/search?sxsrf=ALeKk03E7F20trWL6bVJTLAsdOLmeG9O9Q%3A1597216789244&source=hp&ei=FZgzX6DxC_raz7sP5e6foAQ&q=harishbabu+rengaraj&oq=&gs_lcp=CgZwc3ktYWIQARgAMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMg0ILhDHARCvARDqAhAnUABYAGDZJGgBcAB4AIABAIgBAJIBAJgBAKoBB2d3cy13aXqwAQo&sclient=psy-ab">Google-me</a>
@@ -78,26 +112,44 @@
       </ul>
       <hr class="d-sm-none">
     </div>
+
     <div class="col-sm-8">
       <h2>Chess with AI</h2>
       <h5> Aug 12, 2020</h5>
       <img src="chess.png" alt="image_of_nothing" width="400" height="200">
-      <h6>Description</h6>
-      <p>A chess Source code taken and implemented in the website.Which is cross platform and even works in Internet Explorer(lol..)<a class="nav-link" href="games/chess_AI/chess.html">click to play</a></p>
+      <h5>Description</h5>
+      <p>A chess Source code taken and implemented in the website.Which is cross platform and even works in Internet Explorer(lol..)</p>
+      <button class="button button1" onclick="location.href='games/chess_AI/chess.html'">play</button>
       <br>
       <h2>Cross The Grid</h2>
       <h5>Aug 11, 2020</h5>
-      <img src="ctg.png" alt="image_of_nothing" width="400" height="200">>
-      <p>Description</p>
+      <img src="ctg.png" alt="image_of_nothing" width="400" height="200">
+      <h5>Description</h5>
       <p>Sololearner Krishna Teja Yeluripati created this game.
-      There is a grid in front of you which contains food in some places and bombs in some places. You will be shown the locations of food, bombs for some time.Your objective is to remember as many locations as possible so that you can find more food, step on less bombs and cross the grid area without losing all your lives.What are you waiting for? Let's Start!<a class="nav-link" href="games/cross_the_grid/ctg.html">click to play</a></p>
+      There is a grid in front of you which contains food in some places and bombs in some places. You will be shown the locations of food, bombs for some time.Your objective is to remember as many locations as possible so that you can find more food, step on less bombs and cross the grid area without losing all your lives.What are you waiting for? Let's Start!</p>
+      <button class="button button1" onclick="location.href='games/cross_the_grid/ctg.html'">play</button>
     </div>
   </div>
 </div>
-
+ <div class="container" style="margin-top:30px">
+  <div class="column">
+    <div class="col-sm-12">
+      <h2>Releases</h2>
+      
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="https://github.com/reharish/web/releases/download/V1.0_beta/timebuster.apk">Version 1.0_beta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Version 1.0_Stable</a>
+        </li>
+       
+      </ul>
+      <hr class="d-sm-none">
+    </div>
 <div class="jumbotron text-center" style="margin-bottom:0">
  <p style="font-family:monospace">copyrighted to <a href="https://github.com/reharish">HarishBabu</a></p>
 </div>
-
+   
 </body>
 </html>
