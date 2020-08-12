@@ -1,4 +1,4 @@
-// Created by Krishna Teja Yeluripati
+
 
 alert("CROSS THE GRID!\n\nThere is a grid in front of you which contains food in some places and bombs in some places. You will be shown the locations of food, bombs for some time.\n\nYour objective is to remember as many locations as possible so that you can find more food, step on less bombs and cross the grid area without losing all your lives.\n\nWhat are you waiting for? Let's Start!");
 
