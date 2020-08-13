@@ -1,4 +1,33 @@
- if(Choice == 'left2'){
+function Direction(Choice){
+// The choice of the first buttons 
+    
+    if(Choice == "left" || Choice == "right"){
+        document.getElementById("result").innerHTML = "You chose to go " + Choice + "!<br><br>You open the door and come into a new room. <br>A voice pops up: 'I'm glad you didn't try to escape. This isn't over yet though. Choose the next door.' <br> <br> You hear growls coming from the left door and a man talking behind the right door. What do you do?";
+        document.getElementById('left1').style.display = 'none';
+        document.getElementById("right1").style.display = 'none';
+        document.getElementById("escape1").style.display = 'none';
+        document.getElementById("result").style.display = 'inline';
+        document.getElementById('left2').style.display = 'inline';
+        document.getElementById("right2").style.display = 'inline';
+        document.getElementById("escape2").style.display = 'inline';
+    }
+    
+    if(Choice == "escape"){
+        document.getElementById("result").innerHTML = "<br> HA! Nice try, but you won't get out that easily. You find gap in the wall. If you squeeze you can fit through it... Or can you? You get stuck in the wall and die of starvation.<br> <br> Try again... if you dare!<br><br>";
+        
+       //making sure the right buttons are displayed
+        document.getElementById('left1').style.display = 'none';
+        document.getElementById("right1").style.display = 'none';
+        document.getElementById("escape1").style.display = 'none';
+        document.getElementById("tryagain").style.display = 'block';
+        document.getElementById("result").style.display = 'inline';
+        document.getElementById("loseGif1").style.display = 'block';
+    }
+}
+        
+function Direction2(Choice){
+
+        if(Choice == 'left2'){
             document.getElementById("result2").innerHTML = '<br><br>You chose to go left. You have a death wish or what? Well, I guess you were smart because there actually is a puppy in front of you. CUDDLE IT!<br><br> Though you have to choose again...<br><br>In the next room are three buttons. Choose wisely...<br><br>Hint: My creator likes this letter.' ;
         document.getElementById('left2').style.display = 'none';
         document.getElementById("right2").style.display = 'none';
