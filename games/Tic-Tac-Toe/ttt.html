@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+ <title>TIC TAC TOE</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+<body> <div class="container">
+ <div class="panel panel-default" style="margin-top: 5px">
+ <div class="panel-body">Made By <b>Sololearners</b> <div>
+ </div> <div>
+ <button id="newGame" class="btn btn-info" onclick="startNewGame(),myVib();"><b>NEW GAME</b></button>
+ </div> <audio loop onplay="document.body.classList.add('play-animation')" onpause="document.body.classList.remove('play-animation')" src="https://greggman.github.io/doodles/sounds/DOCTOR VOX - Level Up.mp3" controls type="audio/mpeg" controlsList="nodownload"></audio>
+ <table class="table">
+ <thead>
+ <tr>
+ <th>X</th>
+ <th>Turn</th>
+ <th>0</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><span id="xScore">0</span></td>
+ <td id="header">X</td>
+ <td><span id="oScore">0</span></td>
+
+ </tr>
+ </tbody>
+ </table> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> <div class="square">
+ <div class="content" onclick="move(this)"></div>
+ </div> </div>
+ <script >
+ 
+ var turn="X"; var next="O"; var isOver=false;
+  var header=document.getElementById("header");var xScore=document.getElementById("xScore");
+ var oScore=document.getElementById("oScore");var elements = document.getElementsByClassName("content");
+  </script>
+ 
+ <script>
+     function move(e) {sound(); myVib();
+     
+ if (e.innerHTML === "") { e.innerHTML = turn;
+ turn = next; next = e.innerHTML;header.innerHTML = turn;
+ var result = null;if (!isOver) { result = decision();
+ switch(result){ case "draw": isOver = true;
+ document.getElementById("newGame").style.visibility = "visible"; alert("Draw");
+ break;
+ case "X":
+ xScore.innerHTML++;
+ isOver = true;
+ document.getElementById("newGame").style.visibility = "visible";
+ break;
+ case "O":
+ oScore.innerHTML++;
+ isOver = true;
+ document.getElementById("newGame").style.visibility = "visible";
+ break;
+ }
+ 
+ }
+ }
+
+ }
+ function decision() {for (var i = 0; i < 9; i+=3) {
+ if(elements[i].innerHTML!==""&&elements[i].innerHTML==elements[i+1].innerHTML&&elements[i].innerHTML==elements[i+2].innerHTML){
+ colorBackground(elements[i]); colorBackground(elements[i+1]);
+ colorBackground(elements[i+2]);
+ return elements[i].innerHTML;
+ }
+
+ }
+ for (var i = 0; i < 3; i++) {
+ if(elements[i].innerHTML!==""&&elements[i].innerHTML==elements[i+3].innerHTML&&elements[i].innerHTML==elements[i+6].innerHTML){
+ colorBackground(elements[i]); colorBackground(elements[i+3]);
+ colorBackground(elements[i+6]);
+ return elements[i].innerHTML;
+ }
+ }
+ var b0=elements[0].innerHTML;var b2=elements[2].innerHTML;
+ var b4=elements[4].innerHTML;var b6=elements[6].innerHTML;
+ var b8=elements[8].innerHTML; if(b0!==""&&b0==b4&&b4==b8){
+ colorBackground(elements[0]);
+ colorBackground(elements[4]);
+ colorBackground(elements[8]);
+ return b0;
+ }else if(b2!==""&&b2==b4&&b4==b6){
+ colorBackground(elements[2]);
+ colorBackground(elements[4]);
+ colorBackground(elements[6]);
+ return b2;
+ }
+ var filled=0; for (var i = 0; i < elements.length; i++) {
+ if(elements[i].innerHTML=="X" || elements[i].innerHTML=="O"){
+ filled++; }
+ if(filled==9){ return "draw";
+ }
+ }
+ return false;
+}
+
+
+
+ 
+ function colorBackground(el) {
+ sound();el.style.backgroundColor = "#00ff00";
+ }
+ 
+ function startNewGame() {
+ for (var i = 0; i < elements.length; i++) {
+ elements[i].innerHTML = "";
+ elements[i].style.backgroundColor = "black";
+ }
+ turn = "X"; next = "O";
+ header.innerHTML = turn;isOver = false;
+ document.getElementById("newGame").style.visibility = "hidden";
+ 
+ }
+ 
+ function sound(){var click = new Audio("http://soundbible.com/grab.php?id=1705&type=mp3");
+ var context = new AudioContext();
+ var o = context.createOscillator();
+ var g = context.createGain();
+ o.type = "square"; o.connect(g) ;
+ g.connect(context.destination) ;  o.start();
+ o.stop(0.1);
+ 
+ }
+ 
+ function myVib(){ navigator.vibrate(100);
+}
+    function vibrato(s){ navigator.vibrate(s) ;
+          }
+ 
+ </script>
+ 
+ <style>
+     .square {
+ float:left;
+ position: relative;
+ width:30%;
+ padding-bottom:30%;
+ margin:1.66%;
+ background-color:black;
+}
+
+.content {
+ position:absolute;
+ height:100%;
+ width:100%;
+ font-size:19.0vw;
+ color: white;
+
+}
+
+body {
+ color:#000;
+ text-align:center;
+ background:#ECECEC;
+}
+
+th, td {
+ text-align:center;
+
+}
+     
+ </style>
+</body>
+</html>
